@@ -1,9 +1,9 @@
 import usermodel from "../models/User.js"
  const create=async(req,res)=>{
   try {
-      const {name,fathername,email,phone}=req.body
+      const {name,Location,email,phone,hour,hourlywage,TotalSalary}=req.body
    const Newuser=  new usermodel({
-    name,fathername,email,phone
+    name,Location,email,phone,hour,hourlywage,TotalSalary
    })
    await Newuser.save()
 

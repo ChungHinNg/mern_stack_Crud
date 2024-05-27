@@ -1,3 +1,6 @@
+/* eslint-disable react/jsx-key */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
@@ -30,11 +33,11 @@ export default function Table({ Deletuser, UpdatedUser }) {
                     <div className="table-title">
                         <div className="row">
                             <div className="col-sm-6">
-                                <h2>Manage <b>Employees</b></h2>
+                                <h2>Coaches List</h2>
                             </div>
                             <div className="col-sm-6">
                                 <a href="#" className="btn btn-success" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">
-                                    <i className="material-icons">&#xE147;</i> <span>Add New Employee</span>
+                                     <span>Add New Coaches</span>
                                 </a>
                             </div>
                         </div>
@@ -44,7 +47,7 @@ export default function Table({ Deletuser, UpdatedUser }) {
                             <tr>
                                 <th></th>
                                 <th>Name</th>
-                                <th>Father</th>
+                                <th>Location</th>
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>Actions</th>
@@ -56,7 +59,7 @@ export default function Table({ Deletuser, UpdatedUser }) {
                                     <tr>
                                         <td></td>
                                         <td>{elem.name}</td>
-                                        <td>{elem.fathername}</td>
+                                        <td>{elem.Location}</td>
                                         <td>{elem.email}</td>
                                         <td>{elem.phone}</td>
                                         <td>

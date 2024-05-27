@@ -13,7 +13,7 @@
     }
  .table-title {        
   padding-bottom: 15px;
-     background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+     background: linear-gradient(40deg, #000000, #030303) !important;
   color: #fff;
   padding: 16px 30px;
   margin: -20px -25px 10px;
@@ -83,13 +83,13 @@
   outline: none !important;
  }
  table.table td a:hover {
-  color: #2196F3;
+  color: #000000;
  }
  table.table td a.edit {
-        color: #FFC107;
+        color: #000000;
     }
     table.table td a.delete {
-        color: #F44336;
+        color: #000000;
     }
     table.table td i {
         font-size: 19px;
@@ -119,10 +119,10 @@
         color: #666;
     } 
     .pagination li.active a, .pagination li.active a.page-link {
-        background: #03A9F4;
+        background: #000000;
     }
     .pagination li.active a:hover {        
-        background: #0397d6;
+        background: #000000;
     }
  .pagination li.disabled i {
         color: #ccc;
@@ -175,8 +175,8 @@
   transform: rotateZ(45deg);
  }
  .custom-checkbox input[type="checkbox"]:checked + label:before {
-  border-color: #03A9F4;
-  background: #03A9F4;
+  border-color: #000000;
+  background: #000000;
  }
  .custom-checkbox input[type="checkbox"]:checked + label:after {
   border-color: #fff;
@@ -219,3 +219,33 @@
  .modal form label {
   font-weight: normal;
  } 
+
+
+ .center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    background-color: #040505; /* Bootstrap primary color for example */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px auto; /* Center the button horizontally within its container */
+}
+
+.center-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-button h4 {
+    margin: 0;
+}
+.payrollC{margin: auto 46%;}
+
+.underline{    text-decoration: none;
+    text-decoration-color: white;
+}

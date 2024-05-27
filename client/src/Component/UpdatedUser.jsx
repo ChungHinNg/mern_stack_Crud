@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 
 export default function UpdatedUser({ handleOnSubmit, value, handlechange }) {
@@ -22,8 +24,8 @@ export default function UpdatedUser({ handleOnSubmit, value, handlechange }) {
                                     <input type="text" value={value.name} name='name' onChange={handlechange} className="form-control" />
                                 </div>
                                 <div className="form-group">
-                                    <label>Father</label>
-                                    <input type="text" value={value.fathername} name='fathername' onChange={handlechange} className="form-control" />
+                                    <label>Location</label>
+                                    <input type="text" value={value.Location} name='Location' onChange={handlechange} className="form-control" />
                                 </div>
                                 <div className="form-group">
                                     <label>Email</label>
@@ -33,7 +35,7 @@ export default function UpdatedUser({ handleOnSubmit, value, handlechange }) {
                                 <div className="form-group">
                                     <label>Phone</label>
 
-                                    <input type="text" value={value.phone} name='phone' onChange={handlechange} className="form-control" />
+                                    <input type="number" value={value.phone} name='phone' onChange={handlechange} className="form-control" />
                                 </div>
                             </div>
                             <div className="modal-footer">

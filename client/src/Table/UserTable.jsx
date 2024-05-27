@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import Table from '../Component/Table'
 import AddUser from '../Component/AddUser'
@@ -5,6 +6,7 @@ import UpdatedUser from '../Component/UpdatedUser'
 import DeletUser from '../Component/DeletUser'
 import axios from 'axios'
 import toast from 'react-hot-toast'
+import { Link } from 'react-router-dom';
 
 export default function UserTable() {
     const [userId, setUserId] = useState()
@@ -12,9 +14,10 @@ export default function UserTable() {
     console.log(updatedUserId)
     const [value, setValue] = useState({
         name: "",
-        fathername: "",
+        Location: "",
         email: "",
-        phone: ""
+        phone: "",
+        
     })
     const deletuser = (userid) => {
         setUserId(userid)
@@ -62,7 +65,7 @@ export default function UserTable() {
         // console.log(value)
     }
     return (
-        <>
+        <>    
             <Table Deletuser={deletuser} UpdatedUser={UpadteUserData}></Table>
 
             <AddUser></AddUser>
@@ -70,7 +73,13 @@ export default function UserTable() {
             <DeletUser handleUserDelet={handleUserDelet} ></DeletUser>
 
 
+            <Link to="/payroll" className='underline'>
 
+                           <div className='payrollC'>
+ <button type="button" className="center-button">
+                    <h4>Payroll</h4>
+               
+            </button> </div></Link>
 
         </>
     )

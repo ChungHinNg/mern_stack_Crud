@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useRef, useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast';
@@ -7,9 +8,12 @@ import toast from 'react-hot-toast';
 export default function AddUser() {
     const [value, setValue] = useState({
         name: '',
-        fathername: '',
+        Location: '',
         email: '',
-        phone: ""
+        phone: '',
+        hour: '',
+        hourlywage: '',
+        TotalSalary: '',
     })
     const handleOnchange = (e) => {
         setValue({
@@ -46,8 +50,10 @@ export default function AddUser() {
                 <div className="modal-dialog">
                     <div className="modal-content">
                         <form onSubmit={handleSubmit}>
+                   
+
                             <div className="modal-header">
-                                <h4 className="modal-title">Add Employee</h4>
+                                <h4 className="modal-title">Add Coach</h4>
                                 <button type="button" className="close" data-bs-dismiss="modal" aria-hidden="true" ref={CloseRef}>&times;</button>
                             </div>
                             <div className="modal-body">
@@ -56,8 +62,8 @@ export default function AddUser() {
                                     <input type="text" value={value.name} name='name' onChange={handleOnchange} className="form-control" required />
                                 </div>
                                 <div className="form-group">
-                                    <label>Father </label>
-                                    <input type="text" value={value.fathername} name='fathername' onChange={handleOnchange} className="form-control" required />
+                                    <label>Location </label>
+                                    <input type="text" value={value.Location} name='Location' onChange={handleOnchange} className="form-control" required />
                                 </div>
                                 <div className="form-group">
                                     <label>Email</label>
@@ -66,7 +72,19 @@ export default function AddUser() {
                                 </div>
                                 <div className="form-group">
                                     <label>Phone</label>
-                                    <input type="text" value={value.phone} name='phone' onChange={handleOnchange} className="form-control" required />
+                                    <input type="number" value={value.phone} name='phone' onChange={handleOnchange} className="form-control" required />
+                                </div>
+                                <div className="form-group">
+                                    <label>Hour</label>
+                                    <input type="number" value={value.hour} name='hour' onChange={handleOnchange} className="form-control" required />
+                                </div>
+                                <div className="form-group">
+                                    <label>Hourly Wage</label>
+                                    <input type="number" value={value.hourlywage} name='hourlywage' onChange={handleOnchange} className="form-control" required />
+                                </div> 
+                                <div className="form-group">
+                                    <label>Total Salary</label>
+                                    <input type="number" value={value.TotalSalary} name='TotalSalary' onChange={handleOnchange} className="form-control" required />
                                 </div>
                             </div>
                             <div className="modal-footer">

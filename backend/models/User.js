@@ -5,7 +5,7 @@ const userSchema= new mongoose.Schema({
         type:String,
         required:true
     },
-        fathername:{
+     Location:{
         type:String,
         required:true
     }, 
@@ -14,9 +14,26 @@ const userSchema= new mongoose.Schema({
         required:true
     },
          phone:{
-        type:String,
+        type:Number,
         required:true
-    }
+    },
+         hour:{
+        type:Number,
+        required:true
+        },
+        
+        hourlywage:{
+            type:Number,
+            required:true
+        },
+
+        TotalSalary:{
+            type:Number,
+            required:true
+        },
+
+
+
 },{timestamps:true})
 
 
